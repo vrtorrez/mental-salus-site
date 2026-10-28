@@ -74,12 +74,12 @@ p { margin: 0; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 500 1.55rem/1 var(--serif); white-space: nowrap; }
 .brand img { width: 52px; height: auto; }
-.nav { display: flex; align-items: center; gap: 26px; }
-.nav a { color: var(--text); text-decoration: none; font-size: 0.98rem; }
+.nav { display: flex; align-items: center; gap: 22px; }
+.nav a { color: var(--text); text-decoration: none; font-size: 0.98rem; white-space: nowrap; }
 .nav a:hover { color: var(--mental); }
 .nav .btn { min-height: 44px; padding: 0 18px; font-size: 0.95rem; }
 .menu-btn { display: none; background: none; border: 1.5px solid var(--line); border-radius: 10px; width: 46px; height: 46px; color: var(--ink); cursor: pointer; }
-@media (max-width: 920px) {
+@media (max-width: 1100px) {
   .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
   .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px max(20px, env(safe-area-inset-right, 0px)) 20px max(20px, env(safe-area-inset-left, 0px)); }
   .nav.open { display: flex; }
@@ -124,6 +124,18 @@ p { margin: 0; }
 .facts { display: flex; flex-wrap: wrap; gap: 28px 64px; padding-block: 40px; }
 .fact b { display: block; font: 500 2.6rem/1 var(--serif); color: var(--ink); }
 .fact span { color: var(--muted); font-size: 0.98rem; }
+
+/* Quem somos */
+.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.about-text { display: grid; gap: 18px; }
+.purpose { margin: 8px 0 0; padding: 24px 26px; background: var(--paper-2); border-radius: 18px; display: grid; gap: 8px; }
+.purpose .eyebrow { color: var(--financ); }
+.purpose p:last-child { font: 400 1.3rem/1.45 var(--serif); color: var(--ink); }
+.principles { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.principles li { padding: 20px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
+.principles h3 { font-size: 1.35rem; }
+.principles p { font-size: 1rem; color: var(--text); }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 
 /* Abordagem */
 .concept { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; margin-bottom: 56px; }
@@ -237,9 +249,10 @@ footer a { color: var(--on-dark); }
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#quem-somos">Quem somos</a>
       <a href="#abordagem">Abordagem</a>
-      <a href="#instituicoes">Para instituições</a>
-      <a href="#servidores">Para servidores</a>
+      <a href="#instituicoes">Instituições</a>
+      <a href="#servidores">Servidores</a>
       <a href="#materiais">Materiais</a>
       <a href="#equipe">Equipe</a>
       <a href="#contato">Contato</a>
@@ -296,6 +309,32 @@ footer a { color: var(--on-dark); }
       <p class="fact"><b>2023</b><span>ano de fundação, em Porto Alegre</span></p>
     </div>
   </div>
+
+  <section class="section" id="quem-somos" aria-labelledby="qs-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Quem somos</p>
+        <h2 id="qs-titulo">Saúde para quem dedica a vida ao serviço público</h2>
+      </div>
+      <div class="about">
+        <div class="about-text">
+          <p class="lead">A Mental Salus Educação e Assessoria em Saúde foi fundada em 2023, em Porto Alegre, por três médicos psiquiatras. Desde então, levou formações, palestras e assessoria a mais de 200 municípios gaúchos e a mais de mil servidores públicos.</p>
+          <p>Nosso campo de atuação é a Saúde Mental e Longevidade Laboral no Serviço Público. Estudamos e cuidamos de como a trajetória profissional, as condições de trabalho, a saúde e as escolhas financeiras se combinam ao longo da carreira e chegam à aposentadoria.</p>
+          <p>Trabalhamos com os dois lados dessa trajetória: o servidor, que precisa de informação clara e de cuidado em cada fase, e as instituições públicas, que precisam de dados e de programas consistentes para cuidar de quem trabalha nelas.</p>
+          <div class="purpose">
+            <p class="eyebrow">Nosso propósito</p>
+            <p>Produzir conhecimento, experiências e soluções que ajudem servidores e instituições públicas a cuidar da trajetória profissional como parte da saúde, do envelhecimento e da preparação para a aposentadoria.</p>
+          </div>
+        </div>
+        <ul class="principles" aria-label="Como trabalhamos">
+          <li><h3>Rigor científico</h3><p>Partimos das evidências disponíveis e deixamos claro o que é proposta nossa, aberta à pesquisa e à avaliação.</p></li>
+          <li><h3>Linguagem acolhedora</h3><p>Falamos com o servidor sem rótulos, sem alarmismo e sem tom de cobrança, em qualquer fase da carreira.</p></li>
+          <li><h3>Responsabilidade compartilhada</h3><p>A saúde no trabalho depende de escolhas pessoais e também das condições, lideranças e políticas de cada instituição.</p></li>
+          <li><h3>Proteção de dados</h3><p>Informações individuais pertencem ao servidor. As instituições recebem apenas dados agregados, conforme a LGPD.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="abordagem" aria-labelledby="abord-titulo">
     <div class="wrap">
@@ -531,7 +570,7 @@ footer a { color: var(--on-dark); }
         <p style="margin-top:12px;max-width:26rem">Educação e Assessoria em Saúde. Saúde Mental e Longevidade Laboral no Serviço Público.</p>
       </div>
       <nav class="foot-links" aria-label="Rodapé">
-        <a href="#abordagem">Abordagem</a><a href="#instituicoes">Para instituições</a><a href="#servidores">Para servidores</a><a href="#materiais">Materiais</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a><a href="#contato" data-link="instagram">Instagram</a>
+        <a href="#quem-somos">Quem somos</a><a href="#abordagem">Abordagem</a><a href="#instituicoes">Para instituições</a><a href="#servidores">Para servidores</a><a href="#materiais">Materiais</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a><a href="#contato" data-link="instagram">Instagram</a>
       </nav>
     </div>
     <div class="care">
