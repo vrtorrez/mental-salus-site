@@ -13,7 +13,7 @@
 <meta property="og:description" content="Saúde mental e longevidade laboral no serviço público, do ingresso ao pós-carreira.">
 <meta property="og:url" content="https://www.mentalsalus.com.br/">
 <meta property="og:image" content="https://www.mentalsalus.com.br/assets/folhas.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mental Salus Educação e Assessoria em Saúde","alternateName":"Mental Salus","url":"https://www.mentalsalus.com.br/","logo":"https://www.mentalsalus.com.br/assets/folhas.png","email":"contato@mentalsalus.com.br","areaServed":"BR","address":{"@type":"PostalAddress","addressLocality":"Porto Alegre","addressRegion":"RS","addressCountry":"BR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mental Salus Educação e Assessoria em Saúde","alternateName":"Mental Salus","url":"https://www.mentalsalus.com.br/","logo":"https://www.mentalsalus.com.br/assets/folhas.png","email":"contato@mentalsalus.com.br","areaServed":"BR","telephone":"+55-51-99182-6563","sameAs":["https://www.instagram.com/mentalsalus/"],"address":{"@type":"PostalAddress","streetAddress":"Rua Mostardeiro, 157, sala 1402","addressLocality":"Porto Alegre","addressRegion":"RS","postalCode":"90430-010","addressCountry":"BR"}}</script>
 <title>Mental Salus | Saúde mental e longevidade laboral no serviço público</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -172,7 +172,7 @@ p { margin: 0; }
 @media (max-width: 860px) { .serv { grid-template-columns: 1fr; } }
 
 /* Materiais */
-.materials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.materials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .mat { border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 10px; align-content: start; background: var(--paper); min-width: 0; }
 .mat .kind { font: 700 0.75rem/1.2 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .mat h3 { font-size: 1.4rem; }
@@ -181,12 +181,12 @@ p { margin: 0; }
 .socials a { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 16px; text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.95rem; }
 .socials a:hover { border-color: var(--ink); }
 .socials svg { width: 18px; height: 18px; }
-@media (max-width: 900px) { .materials { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .materials { grid-template-columns: 1fr; } }
 
 /* Equipe */
 .team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .person { display: grid; gap: 10px; align-content: start; min-width: 0; }
-.avatar { width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center; font: 500 1.9rem/1 var(--serif); color: var(--on-dark); background: var(--pc); }
+.avatar { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; background: var(--pc); box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--pc); }
 .person h3 { font-size: 1.5rem; margin-top: 6px; }
 .person .role { font-weight: 700; color: var(--pc); font-size: 0.98rem; }
 .person p { font-size: 0.98rem; color: var(--muted); }
@@ -292,7 +292,7 @@ footer a { color: var(--on-dark); }
   <div class="wrap">
     <div class="facts" aria-label="Alcance">
       <p class="fact"><b>200+</b><span>municípios gaúchos alcançados</span></p>
-      <p class="fact"><b>800+</b><span>servidores públicos em formações</span></p>
+      <p class="fact"><b>1.000+</b><span>servidores públicos alcançados</span></p>
       <p class="fact"><b>2023</b><span>ano de fundação, em Porto Alegre</span></p>
     </div>
   </div>
@@ -404,14 +404,20 @@ footer a { color: var(--on-dark); }
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Materiais</p>
-        <h2 id="mat-titulo">Para ler, usar e compartilhar</h2>
+        <h2 id="mat-titulo">Publicações da Mental Salus</h2>
       </div>
       <div class="materials">
         <article class="mat">
-          <p class="kind">Guia para servidores</p>
+          <p class="kind">Livreto para servidores</p>
           <h3>A aposentadoria começa agora</h3>
-          <p>Guia prático sobre saúde mental e longevidade laboral, organizado pelas fases da carreira e pelos três pilares.</p>
-          <a class="act" href="#contato" data-perfil="guia">Solicitar o guia</a>
+          <p>Guia prático sobre saúde mental e longevidade laboral, organizado pelas fases da carreira e pelos três pilares. Distribuído nos eventos da Mental Salus ou sob solicitação.</p>
+          <a class="act" href="#contato" data-perfil="guia">Solicitar o livreto</a>
+        </article>
+        <article class="mat">
+          <span class="tag">Em breve</span>
+          <p class="kind">Resumo para baixar</p>
+          <h3>O essencial do livreto em poucas páginas</h3>
+          <p>Uma versão resumida e gratuita, para ler no celular e compartilhar com colegas.</p>
         </article>
         <article class="mat">
           <p class="kind">Capítulo de livro</p>
@@ -419,13 +425,10 @@ footer a { color: var(--on-dark); }
           <p>Gabriel Roberto, Rogério Rocha e Vítor Rocco Torrez. Em <i>Anuário sobre RPPS: Fundamentos, Práticas e Inovação</i>, p. 69 a 82.</p>
         </article>
         <article class="mat">
-          <p class="kind">Redes</p>
-          <h3>Acompanhe a Mental Salus</h3>
-          <p>Conteúdos sobre saúde mental, trabalho e aposentadoria no serviço público.</p>
-          <div class="socials">
-            <a href="#" data-link="instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
-            <a href="#" data-link="linkedin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>LinkedIn</a>
-          </div>
+          <span class="tag">Em preparação</span>
+          <p class="kind">Livro</p>
+          <h3>Saúde mental e longevidade laboral no serviço público</h3>
+          <p>Obra conceitual para profissionais, gestores, pesquisadores e servidores. Lançamento previsto para 2027.</p>
         </article>
       </div>
     </div>
@@ -440,19 +443,19 @@ footer a { color: var(--on-dark); }
       </div>
       <div class="team">
         <article class="person" style="--pc: var(--mental)">
-          <div class="avatar" aria-hidden="true">GR</div>
+          <img class="avatar" src="assets/gabriel-roberto.jpg" alt="Foto de Gabriel Roberto" width="128" height="128" loading="lazy">
           <h3>Gabriel Roberto</h3>
           <p class="role">Diretor Executivo</p>
           <p>Médico psiquiatra, especialista em psiquiatria (ABP).</p>
         </article>
         <article class="person" style="--pc: var(--fisica)">
-          <div class="avatar" aria-hidden="true">RR</div>
+          <img class="avatar" src="assets/rogerio-rocha.jpg" alt="Foto de Rogério Rocha" width="128" height="128" loading="lazy">
           <h3>Rogério Rocha</h3>
           <p class="role">Diretor de Projetos</p>
-          <p>Médico psiquiatra, MBA em Gerenciamento de Projetos (FGV).</p>
+          <p>Médico psiquiatra, MBA em Gerenciamento de Projetos (FGV/RS).</p>
         </article>
         <article class="person" style="--pc: var(--financ)">
-          <div class="avatar" aria-hidden="true">VT</div>
+          <img class="avatar" src="assets/vitor-rocco-torrez.jpg" alt="Foto de Vítor Rocco Torrez" width="128" height="128" loading="lazy">
           <h3>Vítor Rocco Torrez</h3>
           <p class="role">Diretor de Ensino</p>
           <p>Médico psiquiatra, doutor em Bioquímica e pós-doutor em Educação em Ciências (UFRGS).</p>
@@ -471,16 +474,20 @@ footer a { color: var(--on-dark); }
       <div class="contact">
         <div class="channels">
           <div class="channel">
+            <span class="label">WhatsApp</span>
+            <span class="value"><a href="#contato" data-link="whatsapp" data-msg="Olá! Gostaria de falar com a Mental Salus." id="wa-text">(51) 99182-6563</a></span>
+          </div>
+          <div class="channel">
             <span class="label">E-mail</span>
             <span class="value"><span id="email-text">contato@mentalsalus.com.br</span><button class="copy" type="button" data-copy="email-text">Copiar</button></span>
           </div>
-          <div class="channel" data-show="whatsapp">
-            <span class="label">WhatsApp</span>
-            <span class="value"><a href="#contato" data-link="whatsapp" data-msg="Olá! Gostaria de falar com a Mental Salus." id="wa-text">Conversar pelo WhatsApp</a></span>
+          <div class="channel">
+            <span class="label">Instagram</span>
+            <span class="value"><a href="#contato" data-link="instagram">@mentalsalus</a></span>
           </div>
           <div class="channel">
-            <span class="label">Base</span>
-            <span class="value">Porto Alegre, Rio Grande do Sul</span>
+            <span class="label">Endereço</span>
+            <span class="value">Rua Mostardeiro, 157, sala 1402<br>Porto Alegre, RS, 90430-010</span>
           </div>
         </div>
         <form id="form" novalidate>
@@ -524,12 +531,13 @@ footer a { color: var(--on-dark); }
         <p style="margin-top:12px;max-width:26rem">Educação e Assessoria em Saúde. Saúde Mental e Longevidade Laboral no Serviço Público.</p>
       </div>
       <nav class="foot-links" aria-label="Rodapé">
-        <a href="#abordagem">Abordagem</a><a href="#instituicoes">Para instituições</a><a href="#servidores">Para servidores</a><a href="#materiais">Materiais</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a>
+        <a href="#abordagem">Abordagem</a><a href="#instituicoes">Para instituições</a><a href="#servidores">Para servidores</a><a href="#materiais">Materiais</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a><a href="#contato" data-link="instagram">Instagram</a>
       </nav>
     </div>
     <div class="care">
       <p>Este site não substitui atendimento em saúde. Em sofrimento intenso ou risco imediato, ligue 188 (CVV, 24 horas) ou 192 (SAMU).</p>
-      <p>© 2026 Mental Salus Educação e Assessoria em Saúde. Este site não usa cookies de rastreamento.</p>
+      <p>Mental Salus Educação e Assessoria em Saúde Ltda · CNPJ 53.814.039/0001-09 · Rua Mostardeiro, 157, sala 1402, Porto Alegre, RS, 90430-010 · Telefone (11) 96170-5445</p>
+      <p>© 2026 Mental Salus. Este site não usa cookies de rastreamento.</p>
     </div>
   </div>
 </footer>
@@ -543,9 +551,8 @@ footer a { color: var(--on-dark); }
 /* Configuração: preencher antes de publicar o site. Campos vazios fazem os botões
    levarem ao formulário de contato. */
 var CONFIG = {
-  whatsapp: '',        // só números, com DDI e DDD, ex.: '5551999999999'
-  instagram: '',       // URL completa do perfil
-  linkedin: '',        // URL completa da página
+  whatsapp: '5551991826563', // só números, com DDI e DDD
+  instagram: 'https://www.instagram.com/mentalsalus/',
   plataforma: '',      // endereço da plataforma quando estiver no ar
   email: 'contato@mentalsalus.com.br'
 };
@@ -558,14 +565,8 @@ var CONFIG = {
     var kind = a.getAttribute('data-link');
     if (kind === 'whatsapp' && CONFIG.whatsapp) { a.href = waUrl(a.getAttribute('data-msg')); a.target = '_blank'; a.rel = 'noopener'; }
     if (kind === 'instagram') { if (CONFIG.instagram) { a.href = CONFIG.instagram; a.target = '_blank'; a.rel = 'noopener'; } else { a.href = '#contato'; } }
-    if (kind === 'linkedin') { if (CONFIG.linkedin) { a.href = CONFIG.linkedin; a.target = '_blank'; a.rel = 'noopener'; } else { a.href = '#contato'; } }
     if (kind === 'plataforma' && CONFIG.plataforma) { a.href = CONFIG.plataforma; }
   });
-  if (CONFIG.whatsapp) {
-    var t = document.getElementById('wa-text');
-    var n = CONFIG.whatsapp.replace(/^55(\d{2})(\d{4,5})(\d{4})$/, '($1) $2-$3');
-    if (t) t.textContent = n;
-  }
 
   // Menu no celular
   var btn = document.getElementById('menu-btn'), nav = document.getElementById('nav');

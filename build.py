@@ -14,7 +14,7 @@ seo = '''<meta charset="utf-8">
 <meta property="og:description" content="Saúde mental e longevidade laboral no serviço público, do ingresso ao pós-carreira.">
 <meta property="og:url" content="https://www.mentalsalus.com.br/">
 <meta property="og:image" content="https://www.mentalsalus.com.br/assets/folhas.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mental Salus Educação e Assessoria em Saúde","alternateName":"Mental Salus","url":"https://www.mentalsalus.com.br/","logo":"https://www.mentalsalus.com.br/assets/folhas.png","email":"contato@mentalsalus.com.br","areaServed":"BR","address":{"@type":"PostalAddress","addressLocality":"Porto Alegre","addressRegion":"RS","addressCountry":"BR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mental Salus Educação e Assessoria em Saúde","alternateName":"Mental Salus","url":"https://www.mentalsalus.com.br/","logo":"https://www.mentalsalus.com.br/assets/folhas.png","email":"contato@mentalsalus.com.br","areaServed":"BR","telephone":"+55-51-99182-6563","sameAs":["https://www.instagram.com/mentalsalus/"],"address":{"@type":"PostalAddress","streetAddress":"Rua Mostardeiro, 157, sala 1402","addressLocality":"Porto Alegre","addressRegion":"RS","postalCode":"90430-010","addressCountry":"BR"}}</script>
 '''
 head_site = head_site.replace('<title>Mental Salus</title>', '<title>Mental Salus | Saúde mental e longevidade laboral no serviço público</title>')
 site = '<!doctype html>\n<html lang="pt-BR">\n<head>\n' + seo + head_site + '</head>\n<body>\n' + body + '</body>\n</html>\n'
