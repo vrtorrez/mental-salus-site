@@ -4,7 +4,7 @@ head, body = src.split('<!--BODY-->', 1)
 head_site = head.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '')
 seo = '''<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Saúde mental e longevidade laboral no serviço público. Palestras, programas, consultoria e plataforma digital para RPPS, prefeituras e servidores, integrando saúde mental, física e financeira.">
+<meta name="description" content="Saúde mental e longevidade laboral no serviço público. Educação previdenciária, preparação para a aposentadoria e saúde do servidor para RPPS: palestras, programas e plataforma que apoiam itens do Pró-Gestão RPPS, integrando saúde mental, física e financeira.">
 <meta name="theme-color" content="#FCFBF7">
 <link rel="canonical" href="https://www.mentalsalus.com.br/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
