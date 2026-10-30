@@ -1,0 +1,36 @@
+<script>
+/* Endereços antigos do site anterior: leva direto à seção equivalente do site novo. */
+(function () {
+  var p = decodeURIComponent(location.pathname).toLowerCase();
+  var map = [
+    [/contato|fale/, '/#contato'],
+    [/previd|rpps|consultoria|educa|servi[cç]o|programa|palestra|curso/, '/#instituicoes'],
+    [/sobre|quem|empresa|historia|história/, '/#quem-somos'],
+    [/equipe|time|socios|sócios/, '/#equipe'],
+    [/material|livro|livreto|blog|artigo/, '/#materiais'],
+    [/pro-?gest/, '/pro-gestao/']
+  ];
+  for (var i = 0; i < map.length; i++) { if (map[i][0].test(p)) { location.replace(map[i][1]); return; } }
+})();
+</script>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/folhas-240.png" alt="" width="52" height="36">Mental Salus</a>
+  </div>
+</header>
+<main id="conteudo">
+  <section class="section" style="border-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Página não encontrada</p>
+        <h1 style="font-size:var(--step-3)">O site da Mental Salus foi renovado</h1>
+        <p class="lead">O endereço que você acessou era do site anterior e não existe mais. Todo o conteúdo está agora na página inicial.</p>
+      </div>
+      <div class="ctas" style="margin-top:0">
+        <a class="btn btn-dark" href="/">Ir para a página inicial</a>
+        <a class="btn btn-line" href="/#instituicoes">Para instituições</a>
+        <a class="btn btn-line" href="/#contato">Contato</a>
+      </div>
+    </div>
+  </section>
+</main>

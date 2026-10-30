@@ -66,4 +66,31 @@ prev_head = head.replace('<title>Mental Salus</title>', pg_title)
 open('preview-pro-gestao.html', 'w', encoding='utf-8').write(doc(
     '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + prev_head + pg_css,
     pg_body.replace('{{HOME}}', './').replace('{{R}}', '')))
+
+# Endereços do site antigo (Wix) que o Google ainda mostra: redirecionamento imediato.
+# O GitHub Pages não faz redirecionamento 301; o meta refresh com tempo zero é lido pelo
+# Google como redirecionamento permanente. A página 404 cobre os demais endereços antigos.
+import os
+REDIRECTS = {
+    'contato': '/#contato',
+    'ms-educação': '/#instituicoes',
+    'ms-educacao': '/#instituicoes',
+    'ms-consultoria-valendo': '/#instituicoes',
+}
+for slug, dest in REDIRECTS.items():
+    os.makedirs(slug, exist_ok=True)
+    open(os.path.join(slug, 'index.html'), 'w', encoding='utf-8').write(
+        '<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
+        '<title>Mental Salus</title>\n'
+        '<meta http-equiv="refresh" content="0; url=' + dest + '">\n'
+        '<link rel="canonical" href="' + SITE + '">\n'
+        '<script>location.replace("' + dest + '");</script>\n'
+        '</head>\n<body>\n<p>Esta página mudou de endereço. <a href="' + dest + '">Continuar para o site da Mental Salus</a>.</p>\n'
+        '</body>\n</html>\n')
+
+nf_body = open('src/404.html', encoding='utf-8').read()
+nf_head = ('<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+           '<meta name="robots" content="noindex">\n<link rel="icon" type="image/png" href="/assets/favicon.png">\n')
+open('404.html', 'w', encoding='utf-8').write(doc(
+    nf_head + site_head.replace('<title>Mental Salus</title>', '<title>Página não encontrada | Mental Salus</title>'), nf_body))
 print('ok')
