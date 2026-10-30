@@ -48,7 +48,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
 body { margin: 0; background: var(--paper); color: var(--text); font: 400 var(--step-0)/1.65 var(--sans); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--mental); text-underline-offset: 3px; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--financ-mid); outline-offset: 2px; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--ink); line-height: 1.12; text-wrap: balance; margin: 0; }
