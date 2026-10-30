@@ -191,6 +191,7 @@ p { margin: 0; }
 /* Materiais */
 .materials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .feat { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.feat.no-media { grid-template-columns: minmax(0, 46rem); }
 .feat-text { display: grid; gap: 14px; align-content: start; }
 .feat-text h3 { font-size: var(--step-2); }
 .feat-list { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
@@ -207,7 +208,6 @@ p { margin: 0; }
 .partners { margin-top: 56px; display: grid; gap: 18px; }
 .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); gap: 16px; }
 .partner { border: 1px solid var(--line); border-radius: 18px; background: #FFFFFF; min-height: 150px; padding: 20px; display: grid; place-items: center; transition: border-color .2s; }
-a.partner[href]:hover { border-color: var(--mental); }
 .feat-org { display: flex; align-items: center; gap: 14px; }
 .feat-org img { height: 56px; width: auto; }
 @media (max-width: 860px) { .feat { grid-template-columns: 1fr; } }

@@ -176,6 +176,7 @@ p { margin: 0; }
 /* Materiais */
 .materials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .feat { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.feat.no-media { grid-template-columns: minmax(0, 46rem); }
 .feat-text { display: grid; gap: 14px; align-content: start; }
 .feat-text h3 { font-size: var(--step-2); }
 .feat-list { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
@@ -192,7 +193,6 @@ p { margin: 0; }
 .partners { margin-top: 56px; display: grid; gap: 18px; }
 .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 280px)); gap: 16px; }
 .partner { border: 1px solid var(--line); border-radius: 18px; background: #FFFFFF; min-height: 150px; padding: 20px; display: grid; place-items: center; transition: border-color .2s; }
-a.partner[href]:hover { border-color: var(--mental); }
 .feat-org { display: flex; align-items: center; gap: 14px; }
 .feat-org img { height: 56px; width: auto; }
 @media (max-width: 860px) { .feat { grid-template-columns: 1fr; } }
@@ -436,7 +436,7 @@ footer a { color: var(--on-dark); }
         <p class="eyebrow">Palestras e parcerias</p>
         <h2 id="parc-titulo">Onde nosso trabalho já chegou</h2>
       </div>
-      <div class="feat">
+      <div class="feat no-media">
         <div class="feat-text">
           <div class="feat-org"><img src="assets/tce-rs.png" alt="Tribunal de Contas do Estado do RS" width="275" height="140"><p class="eyebrow">Em destaque · aula para servidores do TCE-RS</p></div>
           <h3>A aposentadoria começa hoje</h3>
@@ -455,22 +455,17 @@ footer a { color: var(--on-dark); }
             <a class="btn btn-line" href="#contato" data-link="whatsapp" data-msg="Olá! Gostaria de saber mais sobre a aula A aposentadoria começa hoje, apresentada no TCE-RS.">Conversar pelo WhatsApp</a>
           </div>
         </div>
-        <div class="gallery" aria-label="Fotos da aula no TCE-RS">
-          <figure><div class="ph">Foto do evento</div></figure>
-          <figure><div class="ph">Foto do evento</div></figure>
-          <figure><div class="ph">Foto do evento</div></figure>
-        </div>
       </div>
 
       <div class="partners">
         <p class="eyebrow">Parceiros institucionais</p>
         <div class="partner-grid">
-          <a class="partner" data-href="" aria-label="AGIP, Associação Gaúcha de Instituições de Previdência Pública">
+          <div class="partner">
             <img src="assets/parceiro-agip.png" alt="AGIP, Associação Gaúcha de Instituições de Previdência Pública" width="221" height="220" style="height:110px;width:auto">
-          </a>
-          <a class="partner" data-href="" aria-label="DPM Educação">
+          </div>
+          <div class="partner">
             <img src="assets/parceiro-dpm-educacao.png" alt="DPM Educação" width="360" height="140" style="height:64px;width:auto">
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -655,9 +650,7 @@ var CONFIG = {
   whatsapp: '5551991826563', // só números, com DDI e DDD
   instagram: 'https://www.instagram.com/mentalsalus/',
   plataforma: '',      // endereço da plataforma quando estiver no ar
-  email: 'contato@mentalsalus.com.br',
-  // Sites dos parceiros (ordem dos logos: AGIP, DPM Educação). Vazio = logo sem link.
-  parceiros: ['', '']
+  email: 'contato@mentalsalus.com.br'
 };
 
 (function () {
@@ -669,11 +662,6 @@ var CONFIG = {
     if (kind === 'whatsapp' && CONFIG.whatsapp) { a.href = waUrl(a.getAttribute('data-msg')); a.target = '_blank'; a.rel = 'noopener'; }
     if (kind === 'instagram') { if (CONFIG.instagram) { a.href = CONFIG.instagram; a.target = '_blank'; a.rel = 'noopener'; } else { a.href = '#contato'; } }
     if (kind === 'plataforma' && CONFIG.plataforma) { a.href = CONFIG.plataforma; }
-  });
-
-  document.querySelectorAll('.partner').forEach(function (a, i) {
-    var url = CONFIG.parceiros && CONFIG.parceiros[i];
-    if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
   });
 
   // Menu no celular
