@@ -181,6 +181,29 @@ p { margin: 0; }
 
 /* Materiais */
 .materials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.feat { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.feat-text { display: grid; gap: 14px; align-content: start; }
+.feat-text h3 { font-size: var(--step-2); }
+.feat-list { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.feat-list li { display: flex; gap: 10px; }
+.feat-list li::before { content: ""; flex: none; width: 7px; height: 7px; margin-top: 11px; border-radius: 50%; background: var(--financ-mid); }
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.gallery figure { margin: 0; border-radius: 14px; overflow: hidden; background: var(--paper-2); aspect-ratio: 4 / 3; }
+.gallery figure:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; }
+.gallery .ph { width: 100%; height: 100%; display: grid; place-items: center; border: 1.5px dashed var(--line); border-radius: 14px; color: var(--muted); font-size: 0.9rem; }
+.feat details { border-top: 1px solid var(--line); padding-top: 12px; }
+.feat summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.feat details p, .feat details ul { margin: 10px 0 0; }
+.partners { margin-top: 56px; display: grid; gap: 18px; }
+.partner-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.partner { border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: grid; gap: 10px; align-content: start; background: var(--paper); min-width: 0; }
+.partner .logo { height: 56px; display: flex; align-items: center; }
+.partner .logo img { max-height: 56px; width: auto; }
+.partner .logo .ph { font: 700 1.6rem/1 var(--serif); color: var(--ink); letter-spacing: .02em; }
+.partner h4 { margin: 0; font: 500 1.3rem/1.25 var(--serif); color: var(--ink); }
+.partner p { margin: 0; }
+@media (max-width: 860px) { .feat, .partner-grid { grid-template-columns: 1fr; } }
 .mat { border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 10px; align-content: start; background: var(--paper); min-width: 0; }
 .mat .kind { font: 700 0.75rem/1.2 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .mat h3 { font-size: 1.4rem; }
